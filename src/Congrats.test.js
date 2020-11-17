@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { shallow } from 'enzyme';
 
 import Congrats from './Congrats';
-import { findByTestAttr, checkProps } from './testUtils';
+import { findByTestAttr, checkProps } from '../test/testUtils';
 
 
 
