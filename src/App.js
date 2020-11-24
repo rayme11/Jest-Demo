@@ -1,18 +1,25 @@
+import React, { Component } from 'react';
+import GuessedWords from './GuessedWords';
+import Congrats from './Congrats';
+import './App.css';
 
 
-import React from 'react';
 
-function App() {
-  const [count, setCount] = React.useState(0);
+class App extends Component {
 
-  return (
-    <div data-test="component-app">
-      <h1 data-test="counter-display">Counter is currently:&nbsp
-        <span data-test="count">{count}</span>
-      </h1>
-      <button data-test="increment-button" onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
-  );
+    render() {
+        return (
+            <div className="container">
+                <h1>Jotto</h1>
+                <Congrats success={false} />
+                <GuessedWords guessedWords={[
+                    { guessedWord: 'train', letterMatchCount: 3 }
+                ]} />
+            </div>
+
+        );
+    }
 }
 
 export default App;
+
